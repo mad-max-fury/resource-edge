@@ -1,3 +1,19 @@
+# Learnable 21:Frontend
+
+### Standardization Test Exercise 1
+
+## ResourceEdge Overview
+
+Congratulations! The year is 2022 and you have been given a job as a frontend developer with the
+Genesys DevStudio.
+
+### `Problem Statement`
+
+The hardworking product design team has been able to come up with the prototype for ResourceEdge - a
+solution for automating all the human resource needs of the hub. Your first task as a frontend developer,
+should you choose to accept it, is to design this solution called ResourceEdge.
+[Prototype Link](https://www.figma.com/file/aZBjlwJ8fAiUTCJnss6kpS/Learnable-21-STest)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
