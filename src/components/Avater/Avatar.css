@@ -1,0 +1,117 @@
+.avatarWrapper {
+  position: relative;
+}
+.avatarWrapper label {
+  height: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.avatarWrapper label > img {
+  height: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.avatarWrapper input {
+  display: none;
+}
+.dropWrapper {
+  height: 0px;
+
+  border-radius: 2px;
+  width: 0px;
+  position: absolute;
+  top: 150%;
+  right: 5%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 1px 1px 8px gainsboro;
+  display: none;
+  flex-direction: column;
+  /* gap: 1rem; */
+  justify-content: space-between;
+}
+.avatarWrapper input:checked ~ div {
+  transition: display 0.4s ease-in-out;
+  width: 320px;
+  height: 268px;
+  display: flex;
+}
+
+.dropWrapper > div:first-of-type {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dropWrapper > div:first-of-type h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  color: #6b778c;
+}
+.dropWrapper > div:first-of-type span {
+  color: #172b4d;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 20px;
+}
+.dropWrapper > div:nth-of-type(2) {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  height: fit-content;
+  gap: 0.5rem !important;
+}
+.dropWrapper > div:nth-of-type(2) span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  color: #6b778c;
+}
+.dropWrapper > div:nth-of-type(2) > div {
+  display: flex;
+  gap: 1rem;
+}
+.dropWrapper > div:nth-of-type(2) > div:hover {
+  background: #f5f5f5;
+  box-shadow: 0px -1px 8px gainsboro;
+}
+.dropWrapper > div:nth-of-type(2) > div img {
+  height: 2rem;
+  width: 2rem;
+}
+.dropWrapper > div:last-of-type {
+  height: 3rem;
+  width: 100%;
+  border-top: 3px solid gainsboro;
+}
+.dropWrapper > div:last-of-type button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: start;
+  padding-left: 1rem;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #172b4d;
+  cursor: pointer;
+}
+.dropWrapper > div:last-of-type button:hover {
+  background: #f5f5f5;
+  color: #172b4d;
+}
+@media screen and (max-width: 768px) {
+  .dropWrapper {
+    width: 280px;
+    right: -50%;
+  }
+}

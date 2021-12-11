@@ -1,0 +1,23 @@
+.Sechead {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: fit-content;
+  width: 25rem;
+}
+.Sechead h1 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 135%;
+  color: #091e42;
+}
+.Sechead p {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e6c84;
+}

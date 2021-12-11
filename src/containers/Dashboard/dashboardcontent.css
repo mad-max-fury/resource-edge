@@ -1,0 +1,18 @@
+.DashBoardContent-wrapper {
+  height: calc(100% - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DashBoardContent-wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .DashBoardContent-wrapper-inner {
+    width: 95%;
+  }
+}

@@ -1,0 +1,28 @@
+.dasWigdgetWrapper {
+  margin: 1rem 0;
+  width: 65%;
+  height: 4rem;
+  box-shadow: 0 0 2px grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+}
+.dasWigdgetWrapper > div:first-of-type {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.dasWigdgetWrapper > div:first-of-type > div:first-of-type {
+  height: 2rem !important;
+  width: 2rem !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 0 4px grey;
+}
+
+@media screen and (max-width: 768px) {
+  .dasWigdgetWrapper {
+    width: 100%;
+    padding: 0.4rem;
+  }
+}

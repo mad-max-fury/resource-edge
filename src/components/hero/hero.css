@@ -1,0 +1,78 @@
+section.hero {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.hero > div {
+  display: flex;
+  /* border: 1px solid red; */
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+.hero > div > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.hero > div > div:first-of-type > span:first-of-type {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  color: #091e42;
+}
+.hero > div > div:last-of-type {
+  /* border: 1px solid red; */
+  width: 110vw;
+  height: 90vh;
+}
+.hero > div > div:last-of-type > img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero > div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .hero > div > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    width: 80%;
+  }
+  .hero > div > div:last-of-type {
+    /* border: 1px solid green; */
+    align-self: flex-end !important;
+    width: 100%;
+    height: 60vh;
+  }
+  .hero > div > div:first-of-type > span:first-of-type {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color: #091e42;
+  }
+  .hero > div > div:first-of-type > span:last-of-type {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344563;
+  }
+}

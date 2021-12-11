@@ -1,0 +1,38 @@
+div.info {
+  height: 289px;
+  width: 24rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 15px;
+}
+div.info:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: -2px -2px 4px rgb(220, 216, 216), 2px 2px 4px grey;
+}
+div.info > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+}
+div.info > p {
+  text-align: start;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5e6c84;
+}
+
+div.info > h1 {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #091e42;
+}

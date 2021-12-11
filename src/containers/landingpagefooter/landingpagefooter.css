@@ -1,0 +1,57 @@
+.footer {
+  height: 224px;
+  width: 100%;
+  background: #091e42;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer.footer > aside {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+footer.footer > aside:first-of-type > img {
+  width: 15rem;
+}
+footer.footer > aside > p {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 145%;
+  color: #ffffff;
+}
+footer.footer > aside:last-of-type span {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+}
+footer.footer > aside:last-of-type p {
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  footer.footer {
+    height: 25rem;
+    flex-direction: column;
+  }
+  footer.footer > aside {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  footer.footer > aside > p {
+    align-self: center;
+  }
+  footer.footer > aside:last-of-type span {
+    align-self: center;
+    margin: 2rem;
+  }
+  img[src="images/logoF.svg"] {
+    width: 12rem !important;
+  }
+}
