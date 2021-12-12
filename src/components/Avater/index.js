@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import "./Avatar.css"
-
+import { useNavigate } from 'react-router-dom'
 const Avatar = () => {
+  const navigate = useNavigate()
   const [IsActive, setIsActive] = useState(false)
+  const handleLogOut = () => {
+    navigate('/')
+  }
   return (
     <div className="avatarWrapper">
       <label htmlFor="avater">
@@ -35,7 +39,7 @@ const Avatar = () => {
           </div>
         </div>
         <div>
-          <button>Logout</button>
+          <button onClick={handleLogOut}>Logout</button>
         </div>
       </div>
 

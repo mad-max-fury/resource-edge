@@ -1,6 +1,8 @@
 .Dashboard {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .Dashboard-nav {
   box-shadow: 0px 2px 6px rgba(193, 199, 208, 0.4);
@@ -42,6 +44,9 @@
   margin: auto 0;
   gap: 1rem;
   align-items: center;
+}
+.Dashboard > .DashBoardContent-wrapper {
+  height: 95vh;
 }
 
 @media screen and (max-width: 768px) {
