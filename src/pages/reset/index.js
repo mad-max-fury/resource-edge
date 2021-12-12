@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./reset.css"
 const Reset = () => {
   const [IsContinueReset, setIsContinueReset] = useState(true)
   const [IsSuccessFul, setIsSuccessFul] = useState(false)
   return (
-    <main className='signIn'>
+    <main className='reset'>
       <img src='images/authLogo.svg' />
       <form>
         <header>
@@ -59,7 +60,7 @@ const Reset = () => {
           }
           <div style={IsSuccessFul ? myStyles : null}>
             <div style={IsSuccessFul ? myStyles2 : null}></div>
-            <a href='#' style={IsSuccessFul ? myStyles3 : null}>Back to login</a>
+            <Link to={'/login'} style={IsSuccessFul ? myStyles3 : null}>Back to login</Link>
           </div>
 
         </main>

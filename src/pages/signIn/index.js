@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./signIn.css"
 const SignIn = () => {
   const [IsLoggedIn, setIsLoggedIn] = useState(true)
@@ -26,7 +27,7 @@ const SignIn = () => {
                 </>
             }
           </div>
-          <div>
+          <div className='thirdDiv'>
             {
               IsLoggedIn ? <>
                 <h3>Email Address</h3>
@@ -49,7 +50,7 @@ const SignIn = () => {
           </div>
           <div>
             <div className='empty'></div>
-            <a href='#'>Forget password?</a>
+            <Link to={'/reset'}>Forget password?</Link>
           </div>
 
         </main>
@@ -60,3 +61,4 @@ const SignIn = () => {
 }
 
 export default SignIn
+

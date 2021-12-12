@@ -1,6 +1,11 @@
 import React from 'react'
+import { Link, Linkn } from "react-router-dom";
 import "./navbarlandingpage.css"
 const Navbar = () => {
+  // const HandleLogin = () => {
+  //   // const history = useHistory()
+  //   // history.push('/login')
+  // }
   return (
     <nav>
       <div className="sm-screen">
@@ -22,7 +27,7 @@ const Navbar = () => {
               <span className="nav-link"><a>About</a></span>
             </div>
             <div>
-              <button>Log in</button>
+              <button ><Link to={'/login'}>Log in</Link></button>
               <button>Sign Up</button>
             </div>
           </div>
@@ -36,7 +41,7 @@ const Navbar = () => {
         </div>
         <div>
           <button>Sign up</button>
-          <button>Sign in</button>
+          <button ><Link to={'/login'}>Sign in</Link></button>
         </div>
 
       </div>

@@ -59,6 +59,10 @@ nav {
     border: none;
     cursor: pointer;
   }
+  .lg-screen > div:last-of-type > button:last-of-type > a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -143,6 +147,10 @@ nav {
   }
   .dropWrapper > div:last-of-type button:first-of-type {
     background: #0052cc;
+    color: white;
+  }
+  .dropWrapper > div:last-of-type button:first-of-type > a {
+    text-decoration: none;
     color: white;
   }
   .dropWrapper > div:last-of-type button:last-of-type {
