@@ -5,6 +5,7 @@ const Avatar = () => {
   const navigate = useNavigate()
   const [IsActive, setIsActive] = useState(false)
   const handleLogOut = () => {
+    localStorage.setItem("isAuth", false)
     navigate('/')
   }
   return (

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./signIn.css"
 const SignIn = () => {
@@ -6,6 +6,9 @@ const SignIn = () => {
   const [IsLoggedIn, setIsLoggedIn] = useState(true)
   const [Email, setEmail] = useState(null)
   const [Password, setPassword] = useState(null)
+
+  const isAuth = JSON.parse(localStorage.getItem("isAuth"))
+
   const handleFormSubmit = (e) => {
     e.preventDefault()
     if (Email !== null) {
@@ -19,8 +22,17 @@ const SignIn = () => {
     }
   }
   if (Password !== null) {
+    localStorage.setItem("password", Password)
+    localStorage.setItem("email", Email)
+    localStorage.setItem("isAuth", true)
     navigate('/dashboard')
   }
+  // const navigate = useNavigate()
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/dashboard")
+    }
+  }, [])
 
 
   return (

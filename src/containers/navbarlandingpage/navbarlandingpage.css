@@ -56,6 +56,7 @@ nav {
     border-radius: 4px;
     padding: 10px 12px;
     outline: 0;
+
     border: none;
     cursor: pointer;
   }
@@ -148,13 +149,21 @@ nav {
   .dropWrapper > div:last-of-type button:first-of-type {
     background: #0052cc;
     color: white;
+    /* border: 1px solid red; */
+    display: flex;
+    height: 2rem;
+    padding: 0;
   }
   .dropWrapper > div:last-of-type button:first-of-type > a {
     text-decoration: none;
     color: white;
+    width: 100%;
+    text-align: center;
   }
   .dropWrapper > div:last-of-type button:last-of-type {
-    color: #a5adba;
+    color: #f2f4f7;
+    background-color: #a5adba;
+    text-align: center;
   }
   .sm-screen > div:last-of-type input:checked ~ div.dropWrapper {
     transition: display 0.4s ease-in-out;

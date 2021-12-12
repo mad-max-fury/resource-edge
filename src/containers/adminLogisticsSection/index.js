@@ -4,7 +4,11 @@ import InfoWrapper from '../../components/shortMessage'
 import "./adminLogistics.css"
 const AdminLogisticContainer = () => {
   return (
-    <section className='adminLogSec'>
+    <section className='adminLogSec' style={{
+      backgroundImage: `url("images/adminLog.svg")`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover"
+    }}>
       <div>
         <div>
           <SectionHeading SecHeading={"Admin & Logistics"} SecContent={"Manage and track company assets as well as logistics for travelling employees"} />

@@ -1,11 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Avatar from '../../components/Avater'
 import DashBoardContent from '../../containers/Dashboard'
+import { Navigate, useNavigate } from 'react-router-dom'
 import "./Dashboard.css"
 
 const Dashboard = () => {
 
+
   const [IsLoggedIn, setIsLoggedIn] = useState(true)
+  // const [IsLoggedIn, setIsLoggedIn] = useState(true)
+
+
+  const navigate = useNavigate()
+  const isAuth = JSON.parse(localStorage.getItem("isAuth"))
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/login")
+    }
+  }, [])
   return (
     <section className="Dashboard">
       <nav className="Dashboard-nav">

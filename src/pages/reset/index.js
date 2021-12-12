@@ -4,47 +4,44 @@ import "./reset.css"
 const Reset = () => {
   const [IsContinueReset, setIsContinueReset] = useState(true)
   const [IsSuccessFul, setIsSuccessFul] = useState(false)
-  const [Email, setEmail] = useState(null)
+  const [email, setEmail] = useState("")
   const [ResetPassWord, setResetPassWord] = useState(null)
   const [ConfirmResetpassword, setConfirmResetpassword] = useState(null)
 
-  const handleFormSubmitReset = (e) => {
-    console.log(e.target.children)
-    e.preventDefault()
-    if (Email !== null) {
-      const password = document.getElementById("resetPasword")
-      const cpassword = document.getElementById("confirmResetPasword")
-      setResetPassWord(password.value)
-      setConfirmResetpassword(cpassword.value)
+  const [userDetails, setUserDetails] = useState({
+    email: "",
+    password: "",
+    confirmPassword: ""
+  })
+  const handleUserDetails = ({ target: { name, value } }) => {
+    setUserDetails({
+      ...userDetails,
+      [name]: value
+    })
+  }
 
-      setIsSuccessFul(true)
-    } else {
-      const email = document.getElementById("resetEmail")
-      setEmail(email.value)
+  const handleFormSubmitReset = (e) => {
+    e.preventDefault()
+    if (userDetails.email !== "") {
       setIsContinueReset(false)
-      email.value = ""
+    }
+    if (userDetails.password !== "" && userDetails.confirmPassword !== "") {
+      setIsSuccessFul(true)
     }
   }
-  // useEffect(() => {
-  //   window.addEventListener('DOMContentLoaded', () => {
-  //     window.addEventListener('keyup', (e) => {
-  //       if (e.keyCode === 13) {
+  const handleFormReset = (e) => {
+    e.preventDefault()
+    setIsSuccessFul(true)
+    localStorage.setItem("password", userDetails.password)
+  }
 
-  //        console.log()
-  //         // console.log("called")
-  //         // handleFormSubmitReset();
-  //       } else {
-  //         return;
-  //       }
-  //     })
-  //   })
-  // }, [])
-  console.log(true, ResetPassWord, ConfirmResetpassword, Email)
+
+  // alert(userDetails.email)
 
   return (
     <main className='reset'>
       <img src='images/authLogo.svg' />
-      <form onSubmit={handleFormSubmitReset}>
+      <form onSubmit={IsContinueReset ? handleFormSubmitReset : handleFormReset}>
         <header>
           <img src="images/Alogo.svg" />
         </header>
@@ -72,7 +69,7 @@ const Reset = () => {
                     IsContinueReset ? <>
                       <h3>Email Address</h3>
                       <div>
-                        <input type="email" id='resetEmail' placeholder='Enter email' />
+                        <input type="email" name="email" onChange={handleUserDetails} value={userDetails.email} id='resetEmail' placeholder='Enter email' />
                         <div className='empty-to-fill'></div>
                       </div>
                       {/* <span>✔</span> */}
@@ -80,16 +77,18 @@ const Reset = () => {
                       : <>
                         <h3>Password</h3>
                         <div>
-                          <input type="password" id="resetPasword" placeholder='Enter password' />
+                          <input type="password" name='password' value={userDetails.password} onChange={handleUserDetails} id="resetPasword" placeholder='Enter password' />
 
                         </div>
                         {/* <img id="pa" src='images/watch.svg' /> */}
                         <h3>Confirm Password</h3>
                         <div>
-                          <input type="password" id='confirmResetPasword' placeholder='Confirm Password' />
+                          <input type="password" name='confirmPassword' value={userDetails.confirmPassword} onChange={handleUserDetails} id='confirmResetPasword' placeholder='Confirm Password' />
                           <div className='empty-to-fill' style={{ background: "#0052CC" }}></div>
                         </div>
+                        <button type="submit" style={{ display: "none" }}></button>
                         {/* <img id="cp" src='images/watch.svg' /> */}
+
                       </>
                   }
                 </div>
